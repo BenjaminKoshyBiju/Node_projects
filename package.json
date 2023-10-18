@@ -1,0 +1,27 @@
+{
+  "name": "node_projects",
+  "version": "1.0.0",
+  "type":"module",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenjaminKoshyBiju/Node_projects.git"
+  },
+  "author": "Benjamin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenjaminKoshyBiju/Node_projects/issues"
+  },
+  "homepage": "https://github.com/BenjaminKoshyBiju/Node_projects#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+    
+  }
+}
