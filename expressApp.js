@@ -1,11 +1,15 @@
 import express from 'express';
-import * as fs from 'fs';
 const app = express()
 const port = 3000
+//__dirname not available in Es module scope so doing this!
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 
 app.get('/', (req, res) => {
-const data=fs.readFileSync('index.html','utf8')
-  res.send(data)
+res.sendFile(path.join(__dirname,'index.html'))
 })
 
 app.get('/about', (req, res) => {
