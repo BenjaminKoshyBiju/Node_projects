@@ -7,13 +7,28 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// we can create our own middleware but generally opt to use instead of creating new ones.
+const firstMiddleware=(req,res,next)=>{
+  console.log(req)
+  next()
+}
+// app.use(firstMiddleware)
+app.use(express.static(path.join(__dirname,'public' )))
 
 app.get('/', (req, res) => {
 res.sendFile(path.join(__dirname,'index.html'))
 })
 
+//req params 
+app.get('/test/:name', (req, res) => {
+  res.send('hello' + req.params.name)
+  })
+
 app.get('/about', (req, res) => {
-    res.send('Hello World! this is about page')
+    res.json({
+      name:'Benjamin',
+      age:'24'
+    })
   })
   
 
