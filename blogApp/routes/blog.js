@@ -28,8 +28,12 @@ router.get('/blogPost/:slug',(req,res)=>{
     const myBlog=blogData.filter((e)=>{
     return e.slug==req.params.slug
     })
-    console.log(myBlog);
-    res.sendFile(path.join(__dirname,'../templates/blogPage.htm'))
+    // console.log(myBlog);
+    res.render('./blogPage',{
+        title:myBlog[0].title,
+        content:myBlog[0].content
+    });
+    // res.sendFile(path.join(__dirname,'../templates/blogPage.htm'))
 })
 
 export default router;
