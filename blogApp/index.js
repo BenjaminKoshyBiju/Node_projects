@@ -1,7 +1,15 @@
 import express from 'express';
 import blogRoute from './routes/blog.js';
+
 const app = express()
 const port = 3000
+//Importing handlebars
+import { engine } from 'express-handlebars';
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set('views', './views');
+
+
 //__dirname not available in Es module scope so doing this!
 import path from 'path';
 import { fileURLToPath } from 'url';
