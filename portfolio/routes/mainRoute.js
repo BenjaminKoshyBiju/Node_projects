@@ -19,5 +19,28 @@ router.get('/',(req,res)=>{
 
 })
 
+router.get('/:slug',(req,res)=>{
+    const skill=skills.filter((e)=>{
+        
+        return e.slug==req.params.slug
+        
+        })
+    res.render('./work',{
+        framework:skill[0].framework,
+        project_title:skill[0].project_title,
+        desc:skill[0].description,
+        skl1:skill[0].tool1,
+        skl2:skill[0].tool2,
+        skl3:skill[0].tool3,
+        skl4:skill[0].tool4,
+        img:skill[0].img
+
+        // skills:skills,
+
+    });
+    
+
+})
+
 
 export default router;

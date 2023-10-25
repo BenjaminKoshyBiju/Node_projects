@@ -5,28 +5,15 @@
         <div class="row mb-5 align-items-center">
           <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
             <h2>Hey, I'm Benjamin Koshy Biju</h2>
-            <p class="mb-0">Aspiring Backend Daeveloper</p>
-          </div>
-         
-          <div class="col-md-12 col-lg-6 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
-            
-            <div id="filters" class="filters">
-              
-              <a href="#" data-filter="*" class="active">All</a>
-              {{#each keywords}}
-    
-              <a href="#" data-filter=".web">{{this}}</a>
-              {{/each}}
-              </div>
-            </div>
+            <p class="mb-0">Aspiring Backend Developer</p>
           </div>
         </div>
         
         <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
           {{#each skills}}
-          <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
+          <div class="item {{this.framework}} col-sm-6 col-md-4 col-lg-4 mb-4">
             
-            <a href="work-single.html" class="item-wrap fancybox">
+            <a href="/{{this.slug}}" class="item-wrap fancybox">
               
               <div class="work-info">
                 
@@ -163,5 +150,3 @@
       </div>
     </div>
   </footer>
-
-  </script>

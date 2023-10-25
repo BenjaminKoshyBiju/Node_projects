@@ -2,7 +2,7 @@ import express from 'express';
 import blogRoute from './routes/blog.js';
 
 const app = express()
-const port = 3000
+const port = 4000
 //Importing handlebars
 import { engine } from 'express-handlebars';
 app.engine('handlebars', engine());
