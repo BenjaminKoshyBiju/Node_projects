@@ -34,12 +34,10 @@
                    <div class="container">
                        <div class="col-xl-12">
                             <div class="row d-flex justify-content-between align-items-center">
-                                <div class="header-info-left">
-                                    <ul>     
-                                        <li><img src="img/icon/header_icon1.png" alt="">34ºc, Sunny </li>
-                                        <li><img src="img/icon/header_icon1.png" alt="">Tuesday, 18th June, 2019</li>
-                                    </ul>
+                                <div id="weathers">
                                 </div>
+                                
+                                <div id="temps"></div>
                                 <div class="header-info-right">
                                     <ul class="header-social">    
                                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -81,17 +79,11 @@
                                     <nav>                  
                                         <ul id="navigation">    
                                             <li><a href="index.html"></a></li>
-                                            <li><a href="/?query=trending&pageno=1">Trending News</a></li>
+                                            <li><a href="/?query=trending news&pageno=1">Trending News</a></li>
                                             <li><a href="/?query=sports&pageno=1">Sports</a></li>
                                             <li><a href="/?query=World&pageno=1">World</a></li>
                                             <li><a href="/?query=technology&pageno=1">Technology</a></li>
-                                            <li><a href="#">Pages</a>
-                                                <ul class="submenu">
-                                                    <li><a href="elements.html">Element</a></li>
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="single-blog.html">Blog Details</a></li>
-                                                    <li><a href="details.html">Categori Details</a></li>
-                                                </ul>
+                                          
                                             </li>
                                         </ul>
                                     </nav>
@@ -274,5 +266,38 @@
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            const weather = async()=>{
+            let m= await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=10.16&lon=76.64&appid=7c28baa928bd4f9d7aa2ff81e0791d5c&units=metric`)
+            let n= await m.json()
+            console.log(n)
+
+             let str="";
+             
+            for (let item of n.weather)
+            {
+                str= str+ `
+         
+
+
+            <div class="header-info-left">
+                                    <ul>     
+                                        <li><img src="img/icon/header_icon1.png" alt="">${item.main} ${n.main.temp} C</li>
+                                        <li> ${n.name}</li>
+                                    </ul>
+                                </div>
+
+                            
+                `
+            }
+            
+            
+        weathers.innerHTML=str;
+    
+        }
+        
+        weather()
+        </script>
+
 </body>
 </html>
