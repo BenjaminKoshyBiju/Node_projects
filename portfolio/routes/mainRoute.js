@@ -33,7 +33,10 @@ router.get('/:slug',(req,res)=>{
         skl2:skill[0].tool2,
         skl3:skill[0].tool3,
         skl4:skill[0].tool4,
-        img:skill[0].img
+        img:skill[0].img,
+        img1:skill[0].img1,
+        img2:skill[0].img2,
+        link:skill[0].link
 
         // skills:skills,
 

@@ -12,7 +12,10 @@ const skills=[
         tool3:'PostgresSQL',
         tool4:'Docker',
         img:'/img/2fa_img.png',
-        slug:'Django-Based-Auth-App'
+        img1:'/img/react.png',
+        img2:'/img/react.png',
+        slug:'Django-Based-Auth-App',
+        link:'https://www.linkedin.com/posts/benjamin-koshy_python-django-celery-activity-7103561153854767105--R_L?utm_source=share&utm_medium=member_desktop',
 
     },
 
@@ -38,7 +41,8 @@ const skills=[
         tool3:'AWS EC2',
         tool4:'Git Hub',
         img:'/img/react.png',
-        slug:'Movie-App-with-OMDB-api'
+        slug:'Movie-App-with-OMDB-api',
+        link:'https://github.com/BenjaminKoshyBiju/react-App'
 
     },
 
@@ -49,11 +53,43 @@ const skills=[
         tool1:'CRUD',
         tool2:'Authentication',
         tool3:'PostgreSQL',
-        tool4:'InHouse API',
+        tool4:'InHouse API',    
         img:'/img/todo.png',
-        slug:'Second-Django-based-app'
+        slug:'Second-Django-based-app',
+        link:'https://github.com/BenjaminKoshyBiju/notes_app'
 
-    }
+    },
+
+    {
+        project_title:'News App using Express Js',
+        framework:'Express',
+        description:'Created a News app using Express for backend and bootstrap for frontend. used Public apis News API and OpenWeather API for fetching the news and weather data and integrating them in the Web App.',
+        tool1:'Used Bootstrap for frontend',
+        tool2:'Used News API to fetch news Articles',
+        tool3:'Used OpenWeather API to fetch weather data of my Area',
+        tool4:'Worked on Handlebars templete engine',
+        img:'/img/news_app.png',
+        img1:'/img/news1.png',
+        img2:'/img/news2.png',
+        slug:'News-App-using-Express-Js',
+        link:'https://github.com/BenjaminKoshyBiju/Node_projects/tree/main/news_app'
+
+    },
+
+    {
+        project_title:'Ecommerce Web App',
+        framework:'Django',
+        description:'Worked on a static ECommerce website using Django made the Site Dynamic till the Cart page.',
+        tool1:'Used Bootstrap for frontend.',
+        tool2:'Managed Static files using Django and made the site dynamic.',
+
+        img:'/img/Ecommerce.png',
+        link:'https://github.com/BenjaminKoshyBiju/Ecommerce-website',
+        
+        
+        slug:'Ecommerce-Web-App'
+
+    },
 
     
 
