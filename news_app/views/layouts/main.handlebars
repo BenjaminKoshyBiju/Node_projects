@@ -267,8 +267,9 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script>
+            let wkey="{{weather_key}}"
             const weather = async()=>{
-            let m= await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=10.16&lon=76.64&appid=7c28baa928bd4f9d7aa2ff81e0791d5c&units=metric`)
+            let m= await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=10.16&lon=76.64&appid=${wkey}&units=metric`)
             let n= await m.json()
             console.log(n)
 

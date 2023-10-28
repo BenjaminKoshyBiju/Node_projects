@@ -1,3 +1,4 @@
+
 <main>
     <div class="trending-area fix">
         <div class="container">
@@ -44,15 +45,19 @@
         </div>
     </div>
     <!-- End pagination  -->
+    
     <script>
         let articlesPerPage;
+        
         let totalPages;
         let query=window.location.search.split("?")[1].split("&")[0].split("=")[1];
         let page=parseInt(window.location.search.split("?")[1].split("&")[1].split("=")[1]);
         console.log(query,page)
         console.log("Javacript is working")
+        let key="{{news_apikey}}"
+       
         const fetchNews = async(query,page)=>{
-            let a= await fetch(`https://newsapi.org/v2/everything?q=${query}&apiKey=118275ccee6b462a9850d39e0f8a05cd&pageSize=10&page=${page}`)
+            let a= await fetch(`https://newsapi.org/v2/everything?q=${query}&apiKey=${key}&pageSize=10&page=${page}`)
             let r= await a.json()
             console.log(r)
             totalPages=Math.ceil(r.totalResults/articlesPerPage)
