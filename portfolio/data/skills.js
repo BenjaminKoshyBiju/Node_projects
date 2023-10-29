@@ -11,9 +11,12 @@ const skills=[
         tool2:'RabbitMQ',
         tool3:'PostgresSQL',
         tool4:'Docker',
-        img:'/img/2fa_img.png',
-        img1:'/img/react.png',
-        img2:'/img/react.png',
+        img:'/img/auth1.png',
+        img1:'/img/auth2.png',
+        img2:'/img/auth3.png',
+        img3:'/img/auth4.png',
+        
+
         slug:'Django-Based-Auth-App',
         link:'https://www.linkedin.com/posts/benjamin-koshy_python-django-celery-activity-7103561153854767105--R_L?utm_source=share&utm_medium=member_desktop',
 

@@ -36,6 +36,7 @@ router.get('/:slug',(req,res)=>{
         img:skill[0].img,
         img1:skill[0].img1,
         img2:skill[0].img2,
+        img3:skill[0].img3,
         link:skill[0].link
 
         // skills:skills,

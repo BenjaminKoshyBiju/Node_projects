@@ -10,25 +10,20 @@
         </div>
         
         <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
-          {{#each skills}}
-          <div class="item {{this.framework}} col-sm-6 col-md-4 col-lg-4 mb-4">
-            
-            <a href="/{{this.slug}}" class="item-wrap fancybox">
-              
-              <div class="work-info">
-                
-                <h3>{{this.project_title}}</h3>
-                <span>{{this.framework}}</span>
-               
-              </div>
+        {{#each skills}}
+        <div class="item {{this.framework}} col-sm-6 col-md-4 col-lg-4 mb-4">
+          <a href="/{{this.slug}}" class="item-wrap fancybox">
+            <div class="work-info">
+              <h3>{{this.project_title}}</h3>
+              <span>{{this.framework}}</span>
+            </div>
+            <div class="image-container">
               <img class="img-fluid" src="{{this.img}}">
-               
-            </a>
-           
-          </div>
-          {{/each}} 
-            
+            </div>
+          </a>
         </div>
+        {{/each}}
+      </div>
         
       </div>
       
@@ -58,9 +53,9 @@
           <div class="col-50">
             <h3 class="h3 heading">My Work Experience</h3>
             <p>I recently Completed my Masters and during that time I had the opportunity to work as a
-              Software Developer Intern but unfortunately couldnt continue there even though I was offered a full time position
+              Software Developer Intern but unfortunately couldn't continue there even though I was offered a full time position
               because I had to shift back to my native place due to personal reasons, Later got the opportunity to work as
-              a Digital Marketing Exective (Remote) Upskilled my self while working on Productive Marketing Campaigns.
+              a Digital Marketing Exective (Remote) Upskilled myself while working on Productive Marketing Campaigns.
             </p>
           </div>
         </div>
@@ -75,8 +70,12 @@
               <li>{{this.detail1}}</li>
               <li>{{this.detail2}}</li>
               <li>{{this.detail3}}</li>
-              <li>{{this.detail4}}</li>
-              <li>{{this.detail5}}</li>
+              {{#if this.detail4}}
+                <li>{{this.detail4}}</li>
+              {{/if}}
+              {{#if this.detail5}}
+                <li>{{this.detail5}}</li>
+              {{/if}}
             </ul>
             
           </div>
@@ -133,7 +132,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
-          <p class="mb-1">&copy; Copyright MyPortfolio. All Rights Reserved</p>
+          
           <div class="credits">
             <!--
             All the links in the footer should remain intact.
@@ -146,8 +145,7 @@
           </div>
         </div>
         <div class="col-sm-6 social text-md-end">
-          <a href="#"><span class="bi bi-twitter"></span></a>
-          <a href="#"><span class="bi bi-facebook"></span></a>
+          
           <a href="#"><span class="bi bi-instagram"></span></a>
           <a href="#"><span class="bi bi-linkedin"></span></a>
         </div>
