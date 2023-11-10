@@ -1,4 +1,4 @@
-import mongoose, { Types } from "mongoose";
+import mongoose from "mongoose";
 
 const dataSchema=new mongoose.Schema(
 {
@@ -8,4 +8,6 @@ const dataSchema=new mongoose.Schema(
     
 )
 
-export default dataSchema
+const Data = mongoose.model('Data', dataSchema);
+
+export default Data
