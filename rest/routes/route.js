@@ -28,16 +28,42 @@ router.post('/post',bodyParser.json(), async (req,res)=>{
     }
 })
 
-router.get('/getOne/:id', (req, res) => {
-    res.send(req.params.id)
+router.get('/getOne/:id', async (req, res) => {
+    
+     const data=await model.findById(req.params.id).exec();             // code to fetch data by id, got through documentation
+     try{
+     res.status(200).json(data)
+    }
+    catch(error){
+        res.status(404).json({error:error.message})
+    }
+
 })
 
-router.patch('/update/:id', (req, res) => {
-    res.send('Update by ID API')
+router.patch('/update/:id',bodyParser.json(), async (req, res) => {
+    
+    const doc= await model.findById(req.params.id);
+    doc.name=req.body.name;                                     //use body parser json when trying to take incoming requests
+    doc.age=req.body.age;
+    try{
+    await doc.save();
+    res.status(200).json(doc)
+    }
+    catch(error){
+        res.status(404).json({error:error.message})
+    }
 })
 
-router.delete('/delete/:id', (req, res) => {
-    res.send('Delete by ID API')
+router.delete('/delete/:id', async (req, res) => {
+    try{
+        await model.deleteOne({ _id: req.params.id });
+        res.status(200).send('record deleted successfully')
+    }
+    catch(error)
+    {
+        res.status(404).json({error:error.message})
+    }
+    
 })
 
 export default router;
